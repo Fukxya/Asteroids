@@ -1,0 +1,150 @@
+^C:\USERS\OQJ1FE\DESKTOP\AUFGABE2\BUILD\_DEPS\SDL2_IMAGE-SUBBUILD\CMAKEFILES\540B4C64F5EB2178D3D4B38EFC287442\SDL2_IMAGE-POPULATE-MKDIR.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -Dcfgdir=/Debug -P C:/Users/OQJ1FE/Desktop/Aufgabe2/build/_deps/sdl2_image-subbuild/sdl2_image-populate-prefix/tmp/sdl2_image-populate-mkdirs.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/OQJ1FE/Desktop/Aufgabe2/build/_deps/sdl2_image-subbuild/sdl2_image-populate-prefix/src/sdl2_image-populate-stamp/Debug/sdl2_image-populate-mkdir
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\OQJ1FE\DESKTOP\AUFGABE2\BUILD\_DEPS\SDL2_IMAGE-SUBBUILD\CMAKEFILES\540B4C64F5EB2178D3D4B38EFC287442\SDL2_IMAGE-POPULATE-DOWNLOAD.RULE
+setlocal
+cd C:\Users\OQJ1FE\Desktop\Aufgabe2\build\_deps
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE -P C:/Users/OQJ1FE/Desktop/Aufgabe2/build/_deps/sdl2_image-subbuild/sdl2_image-populate-prefix/tmp/sdl2_image-populate-gitclone.cmake
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/OQJ1FE/Desktop/Aufgabe2/build/_deps/sdl2_image-subbuild/sdl2_image-populate-prefix/src/sdl2_image-populate-stamp/Debug/sdl2_image-populate-download
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\OQJ1FE\DESKTOP\AUFGABE2\BUILD\_DEPS\SDL2_IMAGE-SUBBUILD\CMAKEFILES\540B4C64F5EB2178D3D4B38EFC287442\SDL2_IMAGE-POPULATE-UPDATE.RULE
+setlocal
+cd C:\Users\OQJ1FE\Desktop\Aufgabe2\build\_deps\sdl2_image-src
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -Dcan_fetch=YES -DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE -P C:/Users/OQJ1FE/Desktop/Aufgabe2/build/_deps/sdl2_image-subbuild/sdl2_image-populate-prefix/tmp/sdl2_image-populate-gitupdate.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\OQJ1FE\DESKTOP\AUFGABE2\BUILD\_DEPS\SDL2_IMAGE-SUBBUILD\CMAKEFILES\540B4C64F5EB2178D3D4B38EFC287442\SDL2_IMAGE-POPULATE-PATCH.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/OQJ1FE/Desktop/Aufgabe2/build/_deps/sdl2_image-subbuild/sdl2_image-populate-prefix/src/sdl2_image-populate-stamp/Debug/sdl2_image-populate-patch
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\OQJ1FE\DESKTOP\AUFGABE2\BUILD\_DEPS\SDL2_IMAGE-SUBBUILD\CMAKEFILES\540B4C64F5EB2178D3D4B38EFC287442\SDL2_IMAGE-POPULATE-CONFIGURE.RULE
+setlocal
+cd C:\Users\OQJ1FE\Desktop\Aufgabe2\build\_deps\sdl2_image-build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/OQJ1FE/Desktop/Aufgabe2/build/_deps/sdl2_image-subbuild/sdl2_image-populate-prefix/src/sdl2_image-populate-stamp/Debug/sdl2_image-populate-configure
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\OQJ1FE\DESKTOP\AUFGABE2\BUILD\_DEPS\SDL2_IMAGE-SUBBUILD\CMAKEFILES\540B4C64F5EB2178D3D4B38EFC287442\SDL2_IMAGE-POPULATE-BUILD.RULE
+setlocal
+cd C:\Users\OQJ1FE\Desktop\Aufgabe2\build\_deps\sdl2_image-build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/OQJ1FE/Desktop/Aufgabe2/build/_deps/sdl2_image-subbuild/sdl2_image-populate-prefix/src/sdl2_image-populate-stamp/Debug/sdl2_image-populate-build
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\OQJ1FE\DESKTOP\AUFGABE2\BUILD\_DEPS\SDL2_IMAGE-SUBBUILD\CMAKEFILES\540B4C64F5EB2178D3D4B38EFC287442\SDL2_IMAGE-POPULATE-INSTALL.RULE
+setlocal
+cd C:\Users\OQJ1FE\Desktop\Aufgabe2\build\_deps\sdl2_image-build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/OQJ1FE/Desktop/Aufgabe2/build/_deps/sdl2_image-subbuild/sdl2_image-populate-prefix/src/sdl2_image-populate-stamp/Debug/sdl2_image-populate-install
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\OQJ1FE\DESKTOP\AUFGABE2\BUILD\_DEPS\SDL2_IMAGE-SUBBUILD\CMAKEFILES\540B4C64F5EB2178D3D4B38EFC287442\SDL2_IMAGE-POPULATE-TEST.RULE
+setlocal
+cd C:\Users\OQJ1FE\Desktop\Aufgabe2\build\_deps\sdl2_image-build
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/OQJ1FE/Desktop/Aufgabe2/build/_deps/sdl2_image-subbuild/sdl2_image-populate-prefix/src/sdl2_image-populate-stamp/Debug/sdl2_image-populate-test
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\OQJ1FE\DESKTOP\AUFGABE2\BUILD\_DEPS\SDL2_IMAGE-SUBBUILD\CMAKEFILES\02A3679155CBCB7411B8220316DC7B4B\SDL2_IMAGE-POPULATE-COMPLETE.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory C:/Users/OQJ1FE/Desktop/Aufgabe2/build/_deps/sdl2_image-subbuild/CMakeFiles/Debug
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/OQJ1FE/Desktop/Aufgabe2/build/_deps/sdl2_image-subbuild/CMakeFiles/Debug/sdl2_image-populate-complete
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch C:/Users/OQJ1FE/Desktop/Aufgabe2/build/_deps/sdl2_image-subbuild/sdl2_image-populate-prefix/src/sdl2_image-populate-stamp/Debug/sdl2_image-populate-done
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\OQJ1FE\DESKTOP\AUFGABE2\BUILD\_DEPS\SDL2_IMAGE-SUBBUILD\CMAKEFILES\AF47006D51A854AD3636F14BC4451D7D\SDL2_IMAGE-POPULATE.RULE
+setlocal
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\OQJ1FE\DESKTOP\AUFGABE2\BUILD\_DEPS\SDL2_IMAGE-SUBBUILD\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/OQJ1FE/Desktop/Aufgabe2/build/_deps/sdl2_image-subbuild -BC:/Users/OQJ1FE/Desktop/Aufgabe2/build/_deps/sdl2_image-subbuild --check-stamp-file C:/Users/OQJ1FE/Desktop/Aufgabe2/build/_deps/sdl2_image-subbuild/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

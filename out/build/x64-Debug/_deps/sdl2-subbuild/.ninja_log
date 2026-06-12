@@ -1,0 +1,21 @@
+# ninja log v6
+3	283	7987213943048684	sdl2-populate-prefix/src/sdl2-populate-stamp/sdl2-populate-mkdir	d07e566a3c905b52
+3	283	7987213943048684	C:/Users/OQJ1FE/Desktop/Aufgabe 2/out/build/x64-Debug/_deps/sdl2-subbuild/sdl2-populate-prefix/src/sdl2-populate-stamp/sdl2-populate-mkdir	d07e566a3c905b52
+284	11141	7987214051567840	sdl2-populate-prefix/src/sdl2-populate-stamp/sdl2-populate-download	537cdc92ba2a8c0b
+284	11141	7987214051567840	C:/Users/OQJ1FE/Desktop/Aufgabe 2/out/build/x64-Debug/_deps/sdl2-subbuild/sdl2-populate-prefix/src/sdl2-populate-stamp/sdl2-populate-download	537cdc92ba2a8c0b
+11142	11398	7987214052636593	sdl2-populate-prefix/src/sdl2-populate-stamp/sdl2-populate-update	ada9783faeca5a8
+11142	11398	7987214052636593	C:/Users/OQJ1FE/Desktop/Aufgabe 2/out/build/x64-Debug/_deps/sdl2-subbuild/sdl2-populate-prefix/src/sdl2-populate-stamp/sdl2-populate-update	ada9783faeca5a8
+11398	11680	7987214056882928	sdl2-populate-prefix/src/sdl2-populate-stamp/sdl2-populate-patch	2bd2090f97b1e944
+11398	11680	7987214056882928	C:/Users/OQJ1FE/Desktop/Aufgabe 2/out/build/x64-Debug/_deps/sdl2-subbuild/sdl2-populate-prefix/src/sdl2-populate-stamp/sdl2-populate-patch	2bd2090f97b1e944
+11680	11957	7987214059748835	sdl2-populate-prefix/src/sdl2-populate-stamp/sdl2-populate-configure	29b6dbcf1fc12dab
+11680	11957	7987214059748835	C:/Users/OQJ1FE/Desktop/Aufgabe 2/out/build/x64-Debug/_deps/sdl2-subbuild/sdl2-populate-prefix/src/sdl2-populate-stamp/sdl2-populate-configure	29b6dbcf1fc12dab
+11957	12265	7987214062753009	sdl2-populate-prefix/src/sdl2-populate-stamp/sdl2-populate-build	5592ddd3dbac6825
+11957	12265	7987214062753009	C:/Users/OQJ1FE/Desktop/Aufgabe 2/out/build/x64-Debug/_deps/sdl2-subbuild/sdl2-populate-prefix/src/sdl2-populate-stamp/sdl2-populate-build	5592ddd3dbac6825
+12265	12545	7987214065605577	sdl2-populate-prefix/src/sdl2-populate-stamp/sdl2-populate-install	647a43872ab3e430
+12265	12545	7987214065605577	C:/Users/OQJ1FE/Desktop/Aufgabe 2/out/build/x64-Debug/_deps/sdl2-subbuild/sdl2-populate-prefix/src/sdl2-populate-stamp/sdl2-populate-install	647a43872ab3e430
+12545	12815	7987214068311578	sdl2-populate-prefix/src/sdl2-populate-stamp/sdl2-populate-test	70f107fd2ad5de10
+12545	12815	7987214068311578	C:/Users/OQJ1FE/Desktop/Aufgabe 2/out/build/x64-Debug/_deps/sdl2-subbuild/sdl2-populate-prefix/src/sdl2-populate-stamp/sdl2-populate-test	70f107fd2ad5de10
+12816	13217	7987214072271711	CMakeFiles/sdl2-populate-complete	537df88e8e50cff9
+12816	13217	7987214072271711	sdl2-populate-prefix/src/sdl2-populate-stamp/sdl2-populate-done	537df88e8e50cff9
+12816	13217	7987214072271711	C:/Users/OQJ1FE/Desktop/Aufgabe 2/out/build/x64-Debug/_deps/sdl2-subbuild/CMakeFiles/sdl2-populate-complete	537df88e8e50cff9
+12816	13217	7987214072271711	C:/Users/OQJ1FE/Desktop/Aufgabe 2/out/build/x64-Debug/_deps/sdl2-subbuild/sdl2-populate-prefix/src/sdl2-populate-stamp/sdl2-populate-done	537df88e8e50cff9

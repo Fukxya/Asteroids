@@ -1,0 +1,7 @@
+# CMake generation dependency list for this directory.
+C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeDependentOption.cmake
+C:/Program Files/CMake/share/cmake-4.3/Modules/CMakePackageConfigHelpers.cmake
+C:/Program Files/CMake/share/cmake-4.3/Modules/GNUInstallDirs.cmake
+C:/Program Files/CMake/share/cmake-4.3/Modules/WriteBasicConfigVersionFile.cmake
+C:/Users/OQJ1FE/Desktop/Aufgabe2/build/_deps/sdl2_image-src/CMakeLists.txt
+C:/Users/OQJ1FE/Desktop/Aufgabe2/build/_deps/sdl2_image-src/cmake/PrivateSdlFunctions.cmake

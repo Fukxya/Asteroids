@@ -1,0 +1,12 @@
+C:/Users/OQJ1FE/Desktop/Aufgabe2/build/CMakeFiles/copy_assets.dir
+C:/Users/OQJ1FE/Desktop/Aufgabe2/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/OQJ1FE/Desktop/Aufgabe2/build/CMakeFiles/ZERO_CHECK.dir
+C:/Users/OQJ1FE/Desktop/Aufgabe2/build/_deps/sdl2-build/CMakeFiles/sdl_headers_copy.dir
+C:/Users/OQJ1FE/Desktop/Aufgabe2/build/_deps/sdl2-build/CMakeFiles/SDL2main.dir
+C:/Users/OQJ1FE/Desktop/Aufgabe2/build/_deps/sdl2-build/CMakeFiles/SDL2-static.dir
+C:/Users/OQJ1FE/Desktop/Aufgabe2/build/_deps/sdl2-build/CMakeFiles/SDL2_test.dir
+C:/Users/OQJ1FE/Desktop/Aufgabe2/build/_deps/sdl2-build/CMakeFiles/uninstall.dir
+C:/Users/OQJ1FE/Desktop/Aufgabe2/build/_deps/sdl2-build/CMakeFiles/ALL_BUILD.dir
+C:/Users/OQJ1FE/Desktop/Aufgabe2/build/_deps/sdl2_image-build/CMakeFiles/SDL2_image.dir
+C:/Users/OQJ1FE/Desktop/Aufgabe2/build/_deps/sdl2_image-build/CMakeFiles/ALL_BUILD.dir
+C:/Users/OQJ1FE/Desktop/Aufgabe2/build/bin/CMakeFiles/asteroids.dir
