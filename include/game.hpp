@@ -48,6 +48,7 @@ namespace Asteroids{
             void receive_damage(const int damage);
             virtual void on_death() = 0;
             const double radius() const;
+            const bool is_dead()const {return m_health <= 0;};
             // virtual ~IDamageable();
     };
 
@@ -94,7 +95,7 @@ namespace Asteroids{
     class Game : public SDL::Application{
         private:
             std::map<std::string,std::unique_ptr<SDL::Image>> m_textures;
-            std::vector<std::unique_ptr<Entity>> m_asteroids;
+            std::vector<std::unique_ptr<Asteroid>> m_asteroids;
             std::vector<std::unique_ptr<Projectile>> m_projectiles;
             std::unique_ptr<Player> player;
             inline static Game* m_instance;
@@ -109,7 +110,7 @@ namespace Asteroids{
             void render(SDL::Renderer& renderer) const override;
             void setup();
             SDL::Image* get_sprite(std::string name) const;
-            void spawn_asteroid(std::unique_ptr<Entity> entity);
+            void spawn_asteroid(std::unique_ptr<Asteroid> entity);
             void despawn_asteroid(const Asteroid* asteroid);
             void despawn_projectile(const Projectile *projectile);
             static Game *get_instance();

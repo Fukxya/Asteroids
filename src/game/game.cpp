@@ -6,11 +6,12 @@
 #include <vector>
 #include <string>
 #include <algorithm>
+#include <cstdlib> // rand()
 #include <math/vector.hpp>
 #include <cmath> // fmod
 #define ACCELLARATION 2.5
 #define ACCELLARATION_MAX 10.0
-#define PROJECTILE_COOLDOWN 0.1
+#define PROJECTILE_COOLDOWN 1
 #define ROTATION_SPEED 300.0
 namespace Asteroids
 {
@@ -61,9 +62,7 @@ namespace Asteroids
     }
     void IDamageable::receive_damage(int damage){
         m_health -= damage;
-        if(m_health <= 0){
-            on_death();
-        }
+        
     }
     // End IDamagable
     // Player
@@ -111,7 +110,7 @@ namespace Asteroids
     // End Player
     // ASteroid
     Asteroid::Asteroid(const unsigned char asteroid_size, Vector2 position, Vector2 velocity, std::string sprite_name = "", SDL::Image *sprite) : Entity{position, velocity, 0.0, sprite_name, sprite},
-                                                                                                                                                  IDamageable{(double)asteroid_size * 2.0},
+                                                                                                                                                  IDamageable{(double)asteroid_size * 10.0},
                                                                                                                                                   m_asteroid_size{asteroid_size}
     {
         switch (asteroid_size)
@@ -132,10 +131,19 @@ namespace Asteroids
     {
         if (m_asteroid_size > 1)
         {
+            auto rnd = std::rand() % 3 + 2;
+            unsigned char new_size = m_asteroid_size -1;
+            for (size_t i = 0; i < rnd; i++)
+            {
+                auto random_rotation = static_cast<double>(std::rand() % 360);
+                auto ast = std::make_unique<Asteroid>(Asteroid{new_size,m_position, m_velocity.rotate(random_rotation)});
+                Game::get_instance()->spawn_asteroid(std::move(ast));
+            }
+            
             // TODO implement random number and directions
             
         }
-        Game::get_instance()->despawn_asteroid(this);
+       
     }
     // End Asteroid
     //Projectile
@@ -144,7 +152,7 @@ namespace Asteroids
     IDamageable{5.0}{}
 
     void Projectile::on_death() {
-        Game::get_instance()->despawn_projectile(this);
+        // Game::get_instance()->despawn_projectile(this);
     }
     //End Projectile
     // Game
@@ -160,7 +168,7 @@ namespace Asteroids
         m_textures.emplace("asteroid_m", std::make_unique<SDL::Image>(load_image("assets/asteroid01.png")));
         m_textures.emplace("laser", std::make_unique<SDL::Image>(load_image("assets/laser.png")));
         // Initialize Entities
-        m_asteroids = std::vector<std::unique_ptr<Entity>>{};
+        m_asteroids = std::vector<std::unique_ptr<Asteroid>>{};
         // Initialize Player
         auto i = m_textures.find("ship_idle");
 
@@ -210,7 +218,7 @@ namespace Asteroids
         }
     }
 
-    void Game::spawn_asteroid(std::unique_ptr<Entity> entity)
+    void Game::spawn_asteroid(std::unique_ptr<Asteroid> entity)
     {
         entity.get()->load_sprite(get_sprite(entity.get()->sprite_name()));
         m_asteroids.push_back(std::move(entity));
@@ -218,7 +226,7 @@ namespace Asteroids
 
     void Game::despawn_asteroid(const Asteroid* asteroid)
     {
-        auto condition = [&asteroid](const std::unique_ptr<Entity> &entity) {
+        auto condition = [&asteroid](const std::unique_ptr<Asteroid> &entity) {
             return entity.get() == asteroid;
         };
         m_asteroids.erase(std::remove_if(m_asteroids.begin(), m_asteroids.end(), condition), m_asteroids.end());
@@ -234,16 +242,16 @@ namespace Asteroids
 
     void Game::check_collision()
     {
-
+        
         for (const auto &asteroid : m_asteroids)
         {
             if (auto dmgable = dynamic_cast<IDamageable *>(asteroid.get()))
             {
-
                 auto distance = dmgable->radius() + player.get()->radius();
                 if (distance >= (player.get()->position() - asteroid.get()->position()).magnitude())
                 {
                     std::cout << "Player was hit!!!";
+                    quit();
                 }
                 for (const auto& projectile : m_projectiles)
                 {
@@ -257,6 +265,32 @@ namespace Asteroids
                 }
             }
         }
+
+        std::vector<std::unique_ptr<Projectile>> removed_projectiles;
+        for (auto it = m_projectiles.begin(); it != m_projectiles.end(); ) {
+            if ((*it)->is_dead()) {
+                removed_projectiles.push_back(std::move(*it));
+                it = m_projectiles.erase(it);
+            } else {
+                ++it;
+            }
+        }
+        std::vector<std::unique_ptr<Asteroid>> removed_asteroids;
+        for (auto it = m_asteroids.begin(); it != m_asteroids.end(); ) {
+            if ((*it)->is_dead()) {
+                removed_asteroids.push_back(std::move(*it));
+                it = m_asteroids.erase(it);
+            } else {
+                ++it;
+            }
+        }
+        for (auto &proj : removed_projectiles) {
+            proj->on_death();
+        }
+        for (auto &ast : removed_asteroids) {
+            ast->on_death();
+        }
+       
     }
 
     void Game::update(double delta_seconds)
