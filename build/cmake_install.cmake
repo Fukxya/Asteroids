@@ -44,6 +44,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+  include("C:/Users/OQJ1FE/Desktop/Aufgabe2/build/_deps/glad-build/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
   include("C:/Users/OQJ1FE/Desktop/Aufgabe2/build/bin/cmake_install.cmake")
 endif()
 

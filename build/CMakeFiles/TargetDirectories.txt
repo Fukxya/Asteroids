@@ -9,4 +9,7 @@ C:/Users/OQJ1FE/Desktop/Aufgabe2/build/_deps/sdl2-build/CMakeFiles/uninstall.dir
 C:/Users/OQJ1FE/Desktop/Aufgabe2/build/_deps/sdl2-build/CMakeFiles/ALL_BUILD.dir
 C:/Users/OQJ1FE/Desktop/Aufgabe2/build/_deps/sdl2_image-build/CMakeFiles/SDL2_image.dir
 C:/Users/OQJ1FE/Desktop/Aufgabe2/build/_deps/sdl2_image-build/CMakeFiles/ALL_BUILD.dir
+C:/Users/OQJ1FE/Desktop/Aufgabe2/build/_deps/glad-build/CMakeFiles/glad-generate-files.dir
+C:/Users/OQJ1FE/Desktop/Aufgabe2/build/_deps/glad-build/CMakeFiles/glad.dir
+C:/Users/OQJ1FE/Desktop/Aufgabe2/build/_deps/glad-build/CMakeFiles/ALL_BUILD.dir
 C:/Users/OQJ1FE/Desktop/Aufgabe2/build/bin/CMakeFiles/asteroids.dir
