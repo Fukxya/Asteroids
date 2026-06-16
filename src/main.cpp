@@ -5,6 +5,7 @@
 #include <cstdlib>
 #include <iostream>
 #include <exception>
+#include <SDL_video.h>
 #include <game.hpp>
 
 

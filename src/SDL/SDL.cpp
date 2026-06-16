@@ -5,6 +5,7 @@
 #include <exceptions/sdlexceptions.hpp>
 #include <string>
 #include <iostream>
+#include <SDL_video.h>
 
 namespace Asteroids::SDL{
     //Sdl
@@ -30,23 +31,34 @@ namespace Asteroids::SDL{
             SDL_WINDOWPOS_CENTERED,
             width,
             height,
-            SDL_WINDOW_SHOWN
+            SDL_WINDOW_OPENGL
         )
+    },
+    m_gl_context{
+        NULL
     }
     {
         
         if(m_window_ptr == nullptr){
             throw SDLInitializationException("Failed to create Window: " + std::string(SDL_GetError()));
         }
+        m_gl_context = SDL_GL_CreateContext(m_window_ptr);
+        if(m_gl_context == NULL){
+            throw SDLInitializationException("Failed to create Open GL Context: " + std::string(SDL_GetError()));
+        }
         
         
     }
     Window::~Window(){
         SDL_DestroyWindow(m_window_ptr);
+        SDL_GL_DeleteContext(m_gl_context);
     }
 
     SDL_Window* Window::window_ptr()const{
         return m_window_ptr;
+    }
+    SDL_GLContext Window::gl_context() const{
+        return m_gl_context;
     }
     //End Window
     //Renderer
@@ -57,9 +69,13 @@ namespace Asteroids::SDL{
         if(m_renderer_ptr == nullptr){
             throw SDLInitializationException("Failed to create Renderer: " + std::string(SDL_GetError()));
         }
+        if(SDL_GL_MakeCurrent(window.window_ptr(), window.gl_context()) != 0){
+            throw SDLInitializationException("Failed to set Open GL context: " + std::string(SDL_GetError()));
+        }
     }
     Renderer::~Renderer(){
         SDL_DestroyRenderer(m_renderer_ptr);
+        
     }
     SDL_Renderer* Renderer::renderer_ptr() const{
         return m_renderer_ptr;

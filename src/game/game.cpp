@@ -11,8 +11,13 @@
 #include <cmath> // fmod
 #define ACCELLARATION 2.5
 #define ACCELLARATION_MAX 10.0
-#define PROJECTILE_COOLDOWN 1
+#define PROJECTILE_COOLDOWN 0.01
+#define EDGE_MARGIN 20.0
 #define ROTATION_SPEED 300.0
+#define INITIAL_ASTEROID_COUNT 100
+#define INITIAL_SAFETY_DISTANCE 80
+#define ASTEROID_MAX_COUNT 30
+
 namespace Asteroids
 {
     // Entity
@@ -187,7 +192,7 @@ namespace Asteroids
             Vector2{10.0, -7.2},
         }));
 
-
+        spawn_initial_asteroids();
     }
 
     Game *Game::get_instance()
@@ -216,6 +221,38 @@ namespace Asteroids
         {
             renderer.render(*projectile);
         }
+    }
+
+    /// @brief Sets inital Asteroids on game start. Generates random xaand y coordinates while maintaining
+    /// a safety distance to the player
+    void Game::spawn_initial_asteroids(){
+       
+       //Normalized positions 0,0 in the center
+    //    const auto half_x = SCREEN_WIDTH/2;
+    //    const auto half_y = SCREEN_HEIGHT/2;
+
+        for (size_t i = 0; i < INITIAL_ASTEROID_COUNT; i++)
+        {
+            // auto rand_x = std::rand() % (half_x - INITIAL_SAFETY_DISTANCE);
+            // if(std::rand()% 2 == 0){
+            //     rand_x += INITIAL_SAFETY_DISTANCE + half_x;
+            // }
+            // auto rand_y = std::rand() % (half_y - INITIAL_SAFETY_DISTANCE);
+            // if(std::rand()% 2 == 0){
+            //     rand_y += INITIAL_SAFETY_DISTANCE + half_y;
+            // }
+            const auto rnd_rotation = std::rand()%360;
+            const auto rnd_scalar = std::rand()%(SCREEN_WIDTH/4 ) + INITIAL_SAFETY_DISTANCE;
+            const auto pos = Vector2{static_cast<double>(rnd_scalar), 0.0}.rotate(rnd_rotation);
+            auto pAsteroid = std::make_unique<Asteroid>(Asteroid{
+                2,
+                pos,
+                Vector2{10.0,-10.0}
+            });
+            spawn_asteroid(std::move(pAsteroid));
+
+        }
+        
     }
 
     void Game::spawn_asteroid(std::unique_ptr<Asteroid> entity)
