@@ -23,6 +23,7 @@ namespace Asteroids{
             private:
                 const Sdl m_sdl;
                 SDL_Window* m_window_ptr;
+                SDL_GLContext m_gl_context;
             public:
                 Window(const char* name,  const int width, const int height);
                 Window(const Window&) = delete;
@@ -30,6 +31,7 @@ namespace Asteroids{
                 ~Window();
 
                 SDL_Window* window_ptr() const;
+                SDL_GLContext gl_context() const;
               
         };
 

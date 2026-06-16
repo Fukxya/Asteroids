@@ -108,6 +108,7 @@ namespace Asteroids{
             
             void update(double delta_seconds) override;
             void render(SDL::Renderer& renderer) const override;
+            void spawn_initial_asteroids();
             void setup();
             SDL::Image* get_sprite(std::string name) const;
             void spawn_asteroid(std::unique_ptr<Asteroid> entity);
